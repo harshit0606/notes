@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , useMemo } from "react";
+
+import Pagination from "../pagination/Pagination";
 import { useDispatch, useSelector } from "react-redux";
-import { addNote, getNotes, fetchNotes } from "../../redux/actions/notes";
 import axios from "axios";
+import { Modal } from "react-bootstrap";
 import { BsPin } from "react-icons/bs";
 import SingleNote from "./singleNote";
 import "./notes.css";
@@ -11,21 +13,43 @@ function Notes() {
   const [title, setTitle] = useState("");
   const [tagline, setTagline] = useState("");
   const [text, setText] = useState("");
+  const [update,setUpdate]=useState(false);
+  const [modalShow,setModalShow]=useState(false);
   const [ispinned, setisPinned] = useState(false);
-
+  const [loading,setLoading]=useState(true);
+  let view=useSelector((state)=>state.notes);
 let theme=useSelector((state)=>state.theme);
+let PageSize = 6;
+const [currentPage, setCurrentPage] = useState(1);
+
+const currentTableData = useMemo(() => {
+  const firstPageIndex = (currentPage - 1) * PageSize;
+  const lastPageIndex = firstPageIndex + PageSize;
+  return notes.slice(firstPageIndex, lastPageIndex);
+}, [currentPage,loading]);
+
+function handleModalClose() {
+  console.log("closing");
+  setModalShow(false);
+}
+
+function handleOpen() {
+  setModalShow(true);
+}
+
+
   useEffect(() => {
     setNotes([]);
     axios
       .get("http://localhost:5000/api/getnotes")
       .then((res) => {
         setNotes(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
       });
-
-    fetchNotes()
+    
 
     let inputs = document.querySelector(".add_inputs");
     let input1 = document.querySelector(".add_input");
@@ -40,7 +64,7 @@ let theme=useSelector((state)=>state.theme);
         }
       });
     }
-  }, []);
+  }, [update]);
 
   function handleClose() {
     let inputs = document.querySelector(".add_inputs");
@@ -135,11 +159,19 @@ let theme=useSelector((state)=>state.theme);
           </div>
         </div>
       </div>
-      <div className="all_notes">
-        {notes.map((note) => (
-          <SingleNote note={note} />
+      
+      <div className={view?"all_notes":"all_notes full"}>
+        {currentTableData.map((note) => (
+          <SingleNote update={update} setUpdate={setUpdate} openModal={handleOpen} close={handleModalClose} note={note} />
         ))}
       </div>
+      <Pagination
+        className="pagination-bar"
+        currentPage={currentPage}
+        totalCount={notes.length}
+        pageSize={PageSize}
+        onPageChange={page => setCurrentPage(page)}
+      />
     </div>
   );
 }

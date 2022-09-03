@@ -10,9 +10,11 @@ import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import toggleSidebar from '../../redux/actions/sidebar';
 import toggleTheme from '../../redux/actions/theme';
+import toggleNotesView from '../../redux/actions/notes';
 
 function Header() {
   let toggle=useSelector((state)=>state.sidebar);
+  let gridView=useSelector((state)=>state.notes);
   let dispatch=useDispatch();
   let theme=useSelector((state)=>state.theme);
   console.log(theme);
@@ -31,7 +33,7 @@ function Header() {
       </div>
       <div className='header_right'>
       <IoColorFilter onClick={()=>dispatch(toggleTheme(theme))} className='header_icons'/>
-      <FaListUl className='header_icons'/>
+      <FaListUl onClick={()=>dispatch(toggleNotesView(gridView))} className='header_icons'/>
       </div>
     </div>
   )
