@@ -1,10 +1,10 @@
-const noteReducer=(state=true,action )=>{
+const themeReducer=(state=true,action )=>{
     switch(action.type){
-        case "TOGGLENOTES":
+        case "TOGGLETHEME":
             return !state;
         default:
             return state;    
     }
 
 }
-export default noteReducer;
+export default themeReducer;

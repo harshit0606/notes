@@ -1,0 +1,41 @@
+.sidebar_main{
+    width:280px;
+    height: 89vh;
+    transition: all 0.3s ease;
+}
+.sidebar_main.collapsed{
+    width:50px;
+}
+.sidebar_main.collapsed h2{
+    display: none;
+}
+.sidebar_tab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:15px;
+    cursor: pointer;
+    border-radius: 0px 30px 30px 0px;
+font-size: 18px;
+}
+.active{
+    background-color:  #FEEFC3;
+}
+.darkactive{
+    background-color: #41331C;
+}
+.sidebar_tab.darkactive:hover{
+    background-color: rgb(35, 35, 35);
+}
+.sidebar_tab.dark:hover{
+    background-color: rgb(35,35,35);
+}
+.sidebar_tab:hover{
+    background-color: rgb(234, 234, 234);
+
+}
+.sidebar_tab h2{
+    flex:0.8;
+    text-align: left;
+    font-size: 16px;
+}

@@ -1,0 +1,55 @@
+.singlenote{
+    width: 400px;
+    min-height: 160px;
+    border-radius: 5px;
+    padding:20px;
+    position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.singlenote h1{
+   font-size: 24px;
+    margin-bottom: 10px;
+}
+.singlenote p{
+    margin-top: 10px;
+    text-align: left;
+    color: rgb(61, 61, 61);
+}
+.singlenote h3{
+    color: rgb(61, 61, 61);
+}
+.pin_iconn{
+    font-size: 18px;
+    position: absolute;
+    top:10px;
+    display: none;
+    padding:7px;
+    border-radius: 50%;
+    right:20px;
+    cursor: pointer;
+}
+.pin_iconn:hover{
+    color:black;
+    background-color: rgb(234, 234, 234);
+}
+.singlenote:hover .pin_iconn{
+    display: block;
+}
+.dots{
+    font-size: 18px;
+    position: absolute;
+    bottom:10px;
+    display: none;
+    padding:7px;
+    border-radius: 50%;
+    right:20px;
+    cursor: pointer;
+}
+.dots:hover{
+    color:black;
+    background-color: rgb(234, 234, 234);
+}
+.singlenote:hover .dots{
+    display: block;
+}
+

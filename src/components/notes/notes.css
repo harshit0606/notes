@@ -1,0 +1,124 @@
+.add_note{
+    width:550px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding:15px;
+    position:relative;
+}
+.allNotes{
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+.allNotes_dark input{
+background-color: transparent;
+color:white;
+}
+.add_input{
+    border: none;
+    outline: none;
+    width: 520px;
+    height: 25px;
+    font-size: 16px;
+   
+}
+.add_input_dark{
+    background-color: transparent;
+    color:white;
+    border: none;
+    outline: none;
+    width: 520px;
+    height: 25px;
+    font-size: 16px;
+}
+.add_inputs{
+    display: none;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+}
+.add_inputs.visible{
+    display: block;
+}
+.add_input1{
+    border: none;
+    outline: none;
+    width: 520px;
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.add_input2{
+    border: none;
+    outline: none;
+    width: 520px;
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.pin_icon{
+    font-size: 18px;
+    position: absolute;
+    top:10px;
+    display: none;
+    padding:7px;
+    border-radius: 50%;
+    right:20px;
+    cursor: pointer;
+}
+.pin_icon.visible{
+    display: block;
+}
+.pin_icon:hover{
+    color:black;
+    background-color: rgb(234, 234, 234);
+}
+.note_buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.add_btn{
+    padding:8px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color:rgb(98, 98, 98);
+    margin-right: 20px;
+    cursor: pointer;
+}
+.add_btn:hover{
+    background-color: rgb(239, 239, 239);
+    color:black
+}
+.close_btn{
+    padding:8px 20px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color:rgb(98, 98, 98);
+    cursor: pointer;
+}
+.close_btn:hover{
+    background-color: rgb(239, 239, 239);
+    color:black
+}
+.all_notes{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
