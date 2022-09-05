@@ -7,6 +7,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 30px;
     color: rgb(61, 61, 61);
+    z-index: 1;
 }
 
 .singlenote.full{
@@ -20,6 +21,9 @@
 .singlenote h1{
    font-size: 24px;
     margin-bottom: 10px;
+}
+.singlenote h3{
+    font-size: 22px;
 }
 .singlenote p{
     margin-top: 10px;
@@ -49,6 +53,9 @@
    color: black;
     z-index: 1000;
     cursor: pointer;
+}
+.pinned_icon.dark{
+    color:white;
 }
 
 .pin_iconn:hover{
@@ -91,5 +98,48 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 30px;
 }
+.open_div{
+    height: 100%;
+    width:100%;
+    background-color: transparent;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: 20;
+
+}
+.edit_input{
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 25px;
+    font-size: 16px;
+   
+}
+.edit_input_dark{
+    background-color: transparent;
+    color:white;
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 25px;
+    font-size: 16px;
+}
 
 
+.edit_input1{
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.edit_input2{
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}

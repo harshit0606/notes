@@ -125,3 +125,17 @@ color:white;
 .all_notes.full{
     justify-content: center;
 }
+@media(max-width:850px){
+    .add_note{
+        width:430px;
+    }
+    .add_input{
+        width:400px;
+    }
+    .add_input1{
+        width:400px;
+    }
+    .add_input2{
+        width:400px;
+    }
+}

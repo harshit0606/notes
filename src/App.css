@@ -24,11 +24,11 @@ p,h1,h2,h3,h4,h5,h6{
   padding:0;
 }
 a{
-  text-decoration: none;
-  color: #282c34;
+  text-decoration: none!important;
+  color: #282c34!important;
 }
-a.dark{
-  color:white;
+.dark a{
+  color: white !important;;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
