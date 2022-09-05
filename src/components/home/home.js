@@ -8,7 +8,7 @@ import Notes from '../notes/notes';
 function Home() {
   const [notes,setNotes]=useState([{}]);
   useEffect(()=>{
-    axios.get('http://localhost:5000/api/getnotes').then((res)=>{
+    axios.get('https://notes-backend-beta.vercel.app/api/getnotes').then((res)=>{
       
         console.log(res.data);
         setNotes(res.data);

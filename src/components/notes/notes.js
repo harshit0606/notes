@@ -61,7 +61,7 @@ function Notes() {
   useEffect(() => {
     setNotes([]);
     axios
-      .get("http://localhost:5000/api/getnotes")
+      .get("https://notes-backend-beta.vercel.app/api/getnotes")
       .then((res) => {
         setNotes(res.data);
         setLoading(false);
