@@ -60,7 +60,7 @@ function SingleNote({
     }
 else{
   axios
-  .patch(`http://localhost:5000/api/editnote/${note._id}`, {
+  .patch(`https://notes-backend-beta.vercel.app/api/editnote/${note._id}`, {
     Title: title,
     Tagline: tagline,
     Text: text,

@@ -49,7 +49,7 @@ function Notes() {
   }
 
   function handleDelete(noteId) {
-    axios.delete(`http://localhost:5000/api/deletenote/${noteId}`).then(() => {
+    axios.delete(`https://notes-backend-beta.vercel.app/api/deletenote/${noteId}`).then(() => {
       console.log("Note deleted");
       let b = notes.findIndex((a) => a._id === noteId);
       var dummynotes = [...notes];
@@ -116,7 +116,7 @@ function Notes() {
   }
   function handlePin(note) {
     axios
-      .patch(`http://localhost:5000/api/editnote/${note._id}`, {
+      .patch(`https://notes-backend-beta.vercel.app/api/editnote/${note._id}`, {
         isPinned: note.isPinned ? false : true,
       })
       .then(() => {
@@ -133,7 +133,7 @@ if(title==="" && tagline==="" && text===""){
 }
 else{
   axios
-      .post("http://localhost:5000/api/addnote", {
+      .post("https://notes-backend-beta.vercel.app/api/addnote", {
         Title: title,
         Tagline: tagline,
         Text: text,
