@@ -54,6 +54,9 @@
     z-index: 1000;
     cursor: pointer;
 }
+.modal_div{
+    width:480px;
+}
 .pinned_icon.dark{
     color:white;
 }
@@ -142,4 +145,21 @@
     height: 25px;
     font-size: 16px;
     margin-bottom: 10px;
+}
+@media(max-width:500px) {
+    .singlenote{
+        width:340px;
+    }
+    .edit_input{
+        width: 300px;
+    }
+    .edit_input1{
+        width: 300px;
+    }
+    .edit_input2{
+        width: 300px;
+    }
+    .modal_div{
+        width:360px;
+    }
 }

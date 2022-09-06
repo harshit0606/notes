@@ -92,7 +92,7 @@ else{
         }}
       >
         <Modal.Body>
-          <div style={{ width: "480px" }}>
+          <div className="modal_div">
             <div className="edit_note">
               <BsPin onClick={() => pinNote(note)} className="pin_icon" />
               <input

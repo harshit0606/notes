@@ -9,3 +9,11 @@
     position: relative;
 }
 
+@media(max-width:500px){
+    .home_left{
+        display: none;
+    }
+    .home_right{
+        padding:20px 5px;
+    }
+}

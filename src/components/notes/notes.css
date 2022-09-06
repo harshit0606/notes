@@ -139,3 +139,21 @@ color:white;
         width:400px;
     }
 }
+@media(max-width:500px){
+    .add_note{
+        width:330px;
+    }
+    .add_input{
+        width:300px;
+    }
+    .add_input1{
+        width:300px;
+    }
+    .add_input2{
+        width:300px;
+    }
+    .all_notes{
+        width:100%;
+        justify-content: center;
+    }
+}

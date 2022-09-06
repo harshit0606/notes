@@ -79,3 +79,21 @@
     cursor: pointer;
 }
 
+@media(max-width:500px){
+    .header_right{
+        display: none;
+    }
+    .header_search{
+        display: none;
+    }
+    .header_center{
+        display: none;
+    }
+    .header_ham{
+        display: none;
+    }
+    .header_left{
+        flex:1;
+        justify-content: center;
+    }
+}
